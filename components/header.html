@@ -1,12 +1,19 @@
-<nav id="navbar-container">
+<nav class="navbar">
     <div class="nav-left">
-        <img src="assets/logo/logo.png" class="logo">
+        <img src="assets/logo/logo.png" class="nav-logo" onclick="location.href='index.html'">
+
         <a href="index.html">Home</a>
         <a href="category.html">Categories</a>
         <a href="popular.html">Popular</a>
+        <a href="favorites.html">Favorites</a>
     </div>
 
     <div class="nav-right">
-        <a href="favorites.html">❤️ Favorites</a>
+        <input type="text" class="nav-search" placeholder="Search..." onkeypress="if(event.key==='Enter'){location.href='search.html?q='+this.value}">
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div class="hamburger" onclick="document.body.classList.toggle('nav-open')">
+        ☰
     </div>
 </nav>
