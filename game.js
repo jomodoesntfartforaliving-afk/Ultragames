@@ -6,9 +6,18 @@ fetch("games.json")
     .then(games => {
         const game = games.find(g => g.id === gameId);
 
+        // Main game details
         document.getElementById("game-title").innerText = game.title;
-        document.getElementById("game-frame").src = game.url;
-        document.getElementById("game-icon").src = game.icon;
+        document.getElementById("game-category").innerText = game.category;
+        document.getElementById("game-description").innerText = game.description;
+        document.getElementById("game-instructions").innerText = game.instructions;
+        document.getElementById("game-tags").innerText = game.tags;
+        document.getElementById("game-icon").src = game.thumb;
+
+        const iframe = document.getElementById("game-frame");
+        iframe.src = game.url;
+        iframe.style.height = (game.height || 600) + "px";
+        iframe.style.width  = "100%";
 
         loadLikes(gameId);
         loadRecommended(games, gameId);
@@ -24,7 +33,7 @@ function loadRecommended(games, excludeId) {
             div.className = "rec-card";
 
             div.innerHTML = `
-                <img src="${g.icon}">
+                <img src="${g.thumb}">
                 <div class="rec-title">${g.title}</div>
             `;
 
