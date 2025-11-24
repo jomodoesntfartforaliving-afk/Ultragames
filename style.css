@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f3f3;
+}
+
+/* --- GRID --- */
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: 0.25s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 9px 25px rgba(0,0,0,0.25);
+}
+
+.game-card img {
+    width: 100%;
+    display: block;
+}
+
+.game-card-title {
+    padding: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- GAME PAGE --- */
+
+#game-container {
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+}
+
+#main-game {
+    flex: 1;
+}
+
+#game-frame {
+    width: 100%;
+    height: 650px;
+    border: 4px solid #ddd;
+    border-radius: 18px;
+    background: white;
+}
+
+#game-title-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 14px 0;
+}
+
+#game-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+}
+
+#game-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Like / Dislike */
+#buttons {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0 25px;
+}
+
+.like-btn, .dislike-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #e6e6e6;
+    transition: 0.2s;
+}
+
+.like-btn.active {
+    background: #4caf50;
+    color: white;
+}
+
+.dislike-btn.active {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Recommended sidebar */
+#recommended {
+    width: 280px;
+}
+
+.rec-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.rec-card:hover {
+    transform: translateY(-4px);
+}
+
+.rec-card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.rec-title {
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
