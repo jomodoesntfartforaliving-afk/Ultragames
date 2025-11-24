@@ -8,7 +8,7 @@ fetch("games.json")
             card.className = "game-card";
 
             card.innerHTML = `
-                <img src="${g.icon}">
+                <img src="${g.thumb}">
                 <div class="game-card-title">${g.title}</div>
             `;
 
