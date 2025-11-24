@@ -1,0 +1,20 @@
+[
+    {
+        "id": "moto-x3m",
+        "title": "Moto X3M",
+        "url": "https://example.com/moto-x3m",
+        "icon": "icons/moto.png"
+    },
+    {
+        "id": "subway-surfers",
+        "title": "Subway Surfers",
+        "url": "https://example.com/subway",
+        "icon": "icons/subway.png"
+    },
+    {
+        "id": "stickman-hook",
+        "title": "Stickman Hook",
+        "url": "https://example.com/stickman",
+        "icon": "icons/stickman.png"
+    }
+]
